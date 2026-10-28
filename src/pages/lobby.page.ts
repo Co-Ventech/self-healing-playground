@@ -17,7 +17,7 @@ export class LobbyPage extends BasePage {
   }
 
   async claimDailyBonus(): Promise<void> {
-    await this.clickTestId('claim-daily-bonus');
+    await this.clickTestId('claim-bonus');
   }
 
   async expectDailyBonusClaimed(): Promise<void> {
