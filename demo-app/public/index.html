@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Little Shop</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 720px; margin: 24px auto; }
+  section { border: 1px solid #ddd; border-radius: 8px; padding: 16px; margin-bottom: 16px; }
+  button { padding: 8px 14px; margin-right: 8px; }
+  .btn-subscribe { background: #0b5; color: #fff; border: 0; border-radius: 6px; }
+</style>
+</head>
+<body>
+<h1>Little Shop</h1>
+<nav><a href="#contact">Contact us</a></nav>
+
+<section id="login">
+  <h2>Sign in</h2>
+  <input id="email" placeholder="Email">
+  <input id="password" type="password" placeholder="Password">
+  <button id="login-btn">Log in</button>
+  <p id="msg"></p>
+</section>
+
+<section id="products">
+  <h2>Products</h2>
+  <p>Blue mug <button id="add-to-cart">Add to cart</button></p>
+  <p>Items in cart: <span id="cart-count">0</span></p>
+  <p>Total: <span id="total">$10.00</span></p>
+  <input id="coupon" placeholder="Coupon code">
+  <button id="apply-coupon">Apply</button>
+  <div class="cart-actions"><button id="checkout">Checkout</button></div>
+  <p id="order-status"></p>
+</section>
+
+<section id="news">
+  <h2>Newsletter</h2>
+  <button class="btn-subscribe">Subscribe</button>
+  <p id="sub-status"></p>
+</section>
+
+<section id="reports">
+  <h2>Reports</h2>
+  <button id="export-btn">Export report</button>
+  <p id="export-status"></p>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Write to support@littleshop.example</p>
+</section>
+
+<script>
+  const $ = (s) => document.querySelector(s);
+  $('#login-btn').onclick = () => {
+    $('#msg').textContent = $('#password').value === 'secret' ? 'Login successful' : 'Invalid email or password';
+  };
+  let count = 0;
+  $('#add-to-cart').onclick = () => { count += 1; $('#cart-count').textContent = String(count); };
+  $('#apply-coupon').onclick = () => { if ($('#coupon').value === 'SAVE20') $('#total').textContent = '$8.00'; };
+  $('#checkout').onclick = () => { $('#order-status').textContent = 'Order placed'; };
+  $('.btn-subscribe').onclick = () => { $('#sub-status').textContent = 'Subscribed'; };
+  $('#export-btn').onclick = () => { $('#export-status').textContent = 'Exported'; };
+</script>
+</body>
+</html>
