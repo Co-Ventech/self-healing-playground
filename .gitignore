@@ -3,6 +3,7 @@ test-results/
 playwright-report/
 .bdd/
 .features-gen/
+tests/features-gen/
 reports/
 *.log
 .env.local

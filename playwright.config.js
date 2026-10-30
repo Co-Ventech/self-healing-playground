@@ -9,6 +9,8 @@ const testDir = defineBddConfig({
     'automation/user-flows/steps/**/*.js',
     'automation/user-flows/hooks/**/*.js',
   ],
+  // Generate specs under tests/ so healing agents recognize them as test-side code
+  outputDir: 'tests/features-gen',
 });
 
 module.exports = defineConfig({
@@ -42,9 +44,9 @@ module.exports = defineConfig({
   preserveOutput: 'failures-only',
   projects: [
     {
-      name: 'Posters-Galore-Chrome',
-      // Use installed Google Chrome (avoids missing Playwright Chromium binaries)
-      use: { ...devices['Desktop Chrome'], channel: 'chrome' },
+      name: 'Posters-Galore',
+      // Use Playwright's bundled Chromium; the healing platform installs it
+      use: { ...devices['Desktop Chrome'] },
     },
   ],
 });
