@@ -1,0 +1,10 @@
+node_modules/
+test-results/
+playwright-report/
+.bdd/
+reports/cucumber/cucumber-report.json
+*.log
+.env.local
+probe.js
+probe2.js
+site.json
