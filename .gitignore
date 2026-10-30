@@ -2,7 +2,8 @@ node_modules/
 test-results/
 playwright-report/
 .bdd/
-reports/cucumber/cucumber-report.json
+.features-gen/
+reports/
 *.log
 .env.local
 probe.js
