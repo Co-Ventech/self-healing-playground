@@ -7,7 +7,7 @@ export default class Header extends BaseComponent {
     private readonly headerContainerLocator = '#header_container';
     private readonly burgerButton = this.page.locator(`${this.headerContainerLocator} [class="bm-burger-button"]`);
     private readonly burgerMenuItemList = this.page.locator(`${this.headerContainerLocator} [class="bm-item menu-item"]`);
-    public readonly aboutLink = this.page.locator('[data-test="about-sidebar-link"]');
+    public readonly aboutLink = this.page.locator('[data-test="about-link"]');
 
     constructor(page: Page) {
         super(page);

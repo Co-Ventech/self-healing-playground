@@ -8,8 +8,8 @@ export default class InventoryPage extends BasePage {
 
     public readonly items = this.page.locator('.inventory_item');
     public readonly prices = this.page.locator('[data-test="inventory-item-price"]');
-    public readonly cartBadge = this.page.locator('[data-test="shopping-cart-badge"]');
-    private readonly sortSelect = this.page.locator('[data-test="product-sort-container"]');
+    public readonly cartBadge = this.page.locator('[data-test="cart-badge"]');
+    private readonly sortSelect = this.page.locator('[data-test="sort-dropdown"]');
     private readonly cartLink = this.page.locator('[data-test="shopping-cart-link"]');
     private readonly itemNames = this.page.locator('[data-test="inventory-item-name"]');
 

@@ -21,7 +21,7 @@ test.describe('Shop', () => {
     });
 
     test('Sorting by price high to low puts the most expensive product first', async ({ loginPage, inventoryPage }) => {
-        await logIn(loginPage, AccountType.Standard);
+        await logIn(loginPage, AccountType.Problem);
         await inventoryPage.sortBy('hilo');
         await expect(inventoryPage.prices.first()).toHaveText('$49.99');
     });
@@ -50,7 +50,7 @@ test.describe('Shop', () => {
     });
 
     test('Checkout keeps the last name that was typed', async ({ loginPage, inventoryPage, cartPage, checkoutPage }) => {
-        await logIn(loginPage, AccountType.Standard);
+        await logIn(loginPage, AccountType.Problem);
         await inventoryPage.addToCart('sauce-labs-onesie');
         await inventoryPage.openCart();
         await cartPage.checkout();

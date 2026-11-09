@@ -3,7 +3,7 @@ import BasePage from '../base/BasePage';
 import { step } from '../setup/step';
 
 export default class CartPage extends BasePage {
-    public readonly itemNames = this.page.locator('[data-test="inventory-item-name"]');
+    public readonly itemNames = this.page.locator('[data-test="cart-item-name"]');
     private readonly checkoutButton = this.page.locator('[data-test="checkout"]');
 
     constructor(page: Page) {
