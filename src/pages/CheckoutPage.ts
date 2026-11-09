@@ -7,7 +7,7 @@ export default class CheckoutPage extends BasePage {
     public readonly lastName = this.page.locator('[data-test="lastName"]');
     public readonly postalCode = this.page.locator('[data-test="postalCode"]');
     public readonly completeHeader = this.page.locator('[data-test="complete-header"]');
-    private readonly continueButton = this.page.getByRole('button', { name: 'Next' });
+    private readonly continueButton = this.page.locator('[data-test="continue"]');
     private readonly finishButton = this.page.locator('[data-test="finish"]');
 
     constructor(page: Page) {
