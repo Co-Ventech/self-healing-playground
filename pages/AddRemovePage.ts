@@ -8,7 +8,7 @@ export class AddRemovePage {
 
   constructor(page: Page) {
     this.page = page;
-    this.addButton = page.getByRole('button', { name: 'Add Element' });
+    this.addButton = page.getByRole('button', { name: 'Add item' });
     this.deleteButtons = page.getByRole('button', { name: 'Delete' });
   }
 

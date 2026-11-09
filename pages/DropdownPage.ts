@@ -7,7 +7,7 @@ export class DropdownPage {
 
   constructor(page: Page) {
     this.page = page;
-    this.dropdown = page.getByRole('combobox');
+    this.dropdown = page.locator('#dropdown-list');
   }
 
   async goto() {

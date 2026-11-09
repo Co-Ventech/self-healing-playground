@@ -7,7 +7,7 @@ export class HoversPage {
 
   constructor(page: Page) {
     this.page = page;
-    this.figures = page.locator('.figure');
+    this.figures = page.locator('.user-card');
   }
 
   async goto() {

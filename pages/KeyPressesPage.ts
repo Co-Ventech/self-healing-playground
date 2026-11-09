@@ -8,7 +8,7 @@ export class KeyPressesPage {
 
   constructor(page: Page) {
     this.page = page;
-    this.input = page.locator('#target');
+    this.input = page.locator('#key-input');
     this.result = page.locator('#result');
   }
 

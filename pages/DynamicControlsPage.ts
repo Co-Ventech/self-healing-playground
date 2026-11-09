@@ -9,7 +9,7 @@ export class DynamicControlsPage {
 
   constructor(page: Page) {
     this.page = page;
-    this.enableButton = page.getByRole('button', { name: 'Enable' });
+    this.enableButton = page.locator('#enable-button');
     this.textInput = page.locator('#input-example input');
     this.message = page.locator('#message');
   }

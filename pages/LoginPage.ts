@@ -12,7 +12,7 @@ export class LoginPage {
     this.page = page;
     this.username = page.getByLabel('Username');
     this.password = page.getByLabel('Password');
-    this.submit = page.getByRole('button', { name: 'Login' });
+    this.submit = page.getByRole('button', { name: 'Sign in' });
     this.flash = page.locator('#flash');
   }
 

@@ -4,6 +4,8 @@ import { AddRemovePage } from '../pages/AddRemovePage';
 import { DynamicControlsPage } from '../pages/DynamicControlsPage';
 import { HoversPage } from '../pages/HoversPage';
 import { KeyPressesPage } from '../pages/KeyPressesPage';
+import { BrokenImagesPage } from '../pages/BrokenImagesPage';
+import { DisappearingPage } from '../pages/DisappearingPage';
 
 test('Login - valid credentials open the secure area', async ({ page }) => {
   const login = new LoginPage(page);
@@ -41,4 +43,17 @@ test('Key Presses - pressing a key shows it', async ({ page }) => {
   await keys.input.click();
   await keys.input.press('A');
   await expect(keys.result).toHaveText('You entered: A');
+});
+
+test('Broken Images - every image loads', async ({ page }) => {
+  const images = new BrokenImagesPage(page);
+  await images.goto();
+  await expect(images.images).toHaveCount(3);
+  expect(await images.brokenSources()).toEqual([]);
+});
+
+test('Disappearing Elements - the Gallery link is shown', async ({ page }) => {
+  const menu = new DisappearingPage(page);
+  await menu.goto();
+  await expect(menu.galleryLink).toBeVisible();
 });
