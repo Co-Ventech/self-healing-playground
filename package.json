@@ -1,0 +1,38 @@
+{
+  "name": "playwright-saucedemo.com",
+  "version": "1.0.0",
+  "description": "🎭 Playwright test automation project for testing saucedemo.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "report": "npx playwright show-report",
+    "tsc": "npx tsc --project tsconfig.json --noEmit",
+    "lint": "npx eslint \"src/**\"",
+    "check": "npm run tsc && npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VadimNastoyashchy/playwright-saucedemo.com.git"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "testautomation",
+    "saucedemo.com",
+    "pageobject"
+  ],
+  "author": "vadym nastoiashchyi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VadimNastoyashchy/playwright-saucedemo.com/issues"
+  },
+  "homepage": "https://github.com/VadimNastoyashchy/playwright-saucedemo.com#readme",
+  "devDependencies": {
+    "@playwright/test": "1.49.1",
+    "@types/node": "^22.10.5",
+    "@typescript-eslint/eslint-plugin": "5.38.1",
+    "@typescript-eslint/parser": "5.38.1",
+    "eslint-plugin-playwright": "0.11.2",
+    "typescript": "5.7.3"
+  }
+}
