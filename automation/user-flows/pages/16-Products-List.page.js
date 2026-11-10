@@ -14,7 +14,7 @@ class ProductsListPage extends BasePage {
   async openProducts() {
     await this.ensureLoggedIn();
     await this.gotoHash('/#/products');
-    await this.page.getByText(/filter by category/i).waitFor({ state: 'visible', timeout: 180000 });
+    await this.page.getByText(/categories/i).first().waitFor({ state: 'visible', timeout: 180000 });
   }
   async assertProductsToolbar() {
     await expect(this.page.getByText(/create/i).first()).toBeVisible();
