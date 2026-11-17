@@ -1,0 +1,29 @@
+{
+  "name": "pw-practicesoftwaretesting.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test && npx ts-node lib/helpers/archivePlaywrightReport.ts",
+    "home-test": "npx playwright test tests/home/home.spec.ts --config playwright-homespec.config.ts",
+    "stagemask:review": "npx stagemask review"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@currents/playwright": "^0.10.6",
+    "@playwright/test": "^1.58.1",
+    "indent-list-reporter": "^1.0.7",
+    "stagemask": "^0.1.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.2.0",
+    "dotenv": "^16.3.0",
+    "feature-map": "^1.0.0",
+    "js-yaml": "^4.1.0",
+    "otpauth": "^9.3.5",
+    "ts-node": "^10.9.1"
+  }
+}
